@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/Classes/burgers_class.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class DetailsBurger extends StatefulWidget {
   final Burger burger;
@@ -12,7 +14,6 @@ class DetailsBurger extends StatefulWidget {
 
 class _DetailsBurgerState extends State<DetailsBurger> {
   int quantity = 1;
-  double unitPrice = 8.00;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +41,7 @@ class _DetailsBurgerState extends State<DetailsBurger> {
                 Row(
                   children: [
                     const Icon(
-                      Icons.place,
+                      IconsaxPlusBold.location,
                       color: Colors.white,
                     ),
                     Text(
@@ -93,11 +94,11 @@ class _DetailsBurgerState extends State<DetailsBurger> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 60),
+            padding: const EdgeInsets.only(top: 140),
             child: Image.asset(
               widget.burger.imagePath, // Image dynamique
-              height: 550,
-              width: 550,
+              height: 370,
+              width: 370,
             ),
           ),
           Padding(
@@ -155,16 +156,27 @@ class _DetailsBurgerState extends State<DetailsBurger> {
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold),
                           ),
-                          Text(
-                            widget.burger.description, // Description du burger
-                            style: GoogleFonts.varelaRound(
-                                fontSize: 15, color: Colors.black),
+                          Row(
+                            children: [
+                              const Icon(
+                                IconsaxPlusBold.location,
+                                color: Colors.black,
+                                size: 20,
+                              ),
+                              const SizedBox(width: 5),
+                              Text(
+                                widget.burger
+                                    .description, // Description du burger
+                                style: GoogleFonts.varelaRound(
+                                    fontSize: 15, color: Colors.black),
+                              ),
+                            ],
                           ),
                         ],
                       ),
                       const Spacer(),
                       Text(
-                        "\$${widget.burger.price.toStringAsFixed(2)}", // Prix du burger
+                        "\$${(widget.burger.price * quantity).toStringAsFixed(2)}", // Prix du burger
                         style: GoogleFonts.varelaRound(
                             fontSize: 20,
                             color: Colors.black,
@@ -204,9 +216,9 @@ class _DetailsBurgerState extends State<DetailsBurger> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Icon(
-                              Icons.star,
-                              color: Color(0xfff59e0b),
+                            Icon(
+                              MdiIcons.fire,
+                              color: const Color(0xfff59e0b),
                             ),
                             Text('150 Kcal', style: GoogleFonts.varelaRound()),
                           ],
@@ -224,7 +236,7 @@ class _DetailsBurgerState extends State<DetailsBurger> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             const Icon(
-                              Icons.star,
+                              Icons.delivery_dining,
                               color: Color(0xfff59e0b),
                             ),
                             Text('5-10 min', style: GoogleFonts.varelaRound()),
@@ -272,7 +284,9 @@ class _DetailsBurgerState extends State<DetailsBurger> {
                               border: Border.all(color: Colors.black),
                             ),
                             child: const Icon(
-                              Icons.shopping_bag,
+                              IconsaxPlusBold.bag_happy,
+                              color: Colors.black,
+                              size: 30,
                             ),
                           ),
                           const Spacer(),

@@ -4,6 +4,9 @@ import 'package:food_delivery/Screens/Page2.dart';
 import 'package:food_delivery/Screens/Page3.dart';
 import 'package:food_delivery/Screens/Page4.dart';
 import 'package:food_delivery/Screens/Page5.dart';
+import 'package:hugeicons/hugeicons.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
 
 class Screen1 extends StatefulWidget {
   const Screen1({super.key});
@@ -59,19 +62,25 @@ class _Screen1State extends State<Screen1> {
                 size: 30), // Taille des icônes non sélectionnées
             items: const [
               BottomNavigationBarItem(
-                icon: Icon(Icons.home),
+                icon: Icon(Iconsax.home_11),
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.search),
+                icon: Icon(
+                  IconsaxPlusBold.message,
+                ),
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.notifications),
+                icon: Icon(
+                  IconsaxPlusBold.bag_happy,
+                ),
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.settings),
+                icon: Icon(
+                  IconsaxPlusBold.notification,
+                ),
                 label: '',
               ),
               BottomNavigationBarItem(

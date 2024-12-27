@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/Tabs/tab_burger.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
 
 class Page1 extends StatefulWidget {
   const Page1({super.key});
@@ -38,13 +39,15 @@ class _Page1State extends State<Page1> {
                       color: const Color(0xfff3f3f3),
                       borderRadius: BorderRadius.circular(20)),
                   child: const Center(
-                    child: Icon(Icons.browse_gallery),
+                    child: Icon(IconsaxPlusBold.element_2),
                   ),
                 ),
                 const Spacer(),
                 Row(
                   children: [
-                    const Icon(Icons.place),
+                    const Icon(
+                      IconsaxPlusBold.location,
+                    ),
                     Text(
                       'California, US',
                       style: GoogleFonts.varelaRound(

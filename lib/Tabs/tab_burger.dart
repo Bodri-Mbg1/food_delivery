@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery/Classes/burgers_class.dart';
 import 'package:food_delivery/Details/details_burger.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class TabBurger extends StatefulWidget {
   const TabBurger({super.key});
@@ -85,26 +86,26 @@ class _TabBurgerState extends State<TabBurger> {
                         fit: BoxFit.contain,
                       ),
                       Positioned(
-                        top: 10,
-                        right: 10,
+                        top: 5,
+                        right: 2,
                         child: Container(
                           decoration: const BoxDecoration(
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.grey,
+                                color: Colors.black12,
                                 blurRadius: 5,
                                 spreadRadius: 2,
                                 offset: Offset(0, 3),
                               ),
                             ],
                           ),
-                          child: const CircleAvatar(
-                            radius: 10,
+                          child: CircleAvatar(
+                            radius: 15,
                             backgroundColor: Colors.white,
                             child: Icon(
-                              Icons.favorite,
-                              size: 10,
-                              color: Colors.red,
+                              MdiIcons.fire,
+                              size: 20,
+                              color: const Color(0xfff59e0b),
                             ),
                           ),
                         ),
