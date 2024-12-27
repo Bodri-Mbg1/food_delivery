@@ -21,6 +21,108 @@ class _HomeState extends State<Home> {
       backgroundColor: const Color(0xff064635),
       body: Stack(
         children: [
+          Positioned(
+            top: 100,
+            left: 0,
+            right: 250,
+            child: Transform.rotate(
+              angle: 0.5,
+              child: Opacity(
+                opacity: 0.3,
+                child: Image.asset(
+                  'assets/img/P (1).png',
+                  height: 40,
+                  width: 40,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 100,
+            left: 250,
+            right: 0,
+            child: Transform.rotate(
+              angle: -0.5,
+              child: Opacity(
+                opacity: 0.3,
+                child: Image.asset(
+                  'assets/img/P (2).png',
+                  height: 40,
+                  width: 40,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 270,
+            left: 0,
+            right: 320,
+            child: Transform.rotate(
+              angle: 0.5,
+              child: Opacity(
+                opacity: 0.3,
+                child: Image.asset(
+                  'assets/img/P (3).png',
+                  height: 40,
+                  width: 40,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 270,
+            left: 320,
+            right: 0,
+            child: Transform.rotate(
+              angle: -0.5,
+              child: Opacity(
+                opacity: 0.3,
+                child: Image.asset(
+                  'assets/img/P (4).png',
+                  height: 40,
+                  width: 40,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 400,
+            left: 0,
+            right: 320,
+            child: Transform.rotate(
+              angle: 0.5,
+              child: Opacity(
+                opacity: 0.3,
+                child: Image.asset(
+                  'assets/img/P (5).png',
+                  height: 40,
+                  width: 40,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            top: 400,
+            left: 320,
+            right: 0,
+            child: Transform.rotate(
+              angle: -0.5,
+              child: Opacity(
+                opacity: 0.3,
+                child: Image.asset(
+                  'assets/img/P (5).png',
+                  height: 40,
+                  width: 40,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
           Column(
             children: [
               Expanded(
@@ -38,24 +140,24 @@ class _HomeState extends State<Home> {
                       padding: const EdgeInsets.only(bottom: 200),
                       child: Center(
                         child: SizedBox(
-                          height: 500,
-                          width: 500,
+                          height: 900,
+                          width: 900,
                           child: Image.asset(
-                            'assets/img/chef1.png',
-                            fit: BoxFit.contain,
+                            'assets/img/chef11.png',
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 200),
+                      padding: const EdgeInsets.only(bottom: 200, top: 100),
                       child: Center(
                         child: SizedBox(
-                          height: 500,
-                          width: 500,
+                          height: 600,
+                          width: 600,
                           child: Image.asset(
                             'assets/img/chef3.png',
-                            fit: BoxFit.contain,
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ),
@@ -67,7 +169,7 @@ class _HomeState extends State<Home> {
                           height: 500,
                           width: 500,
                           child: Image.asset(
-                            'assets/img/chef1.png',
+                            'assets/img/pngegg (9).png',
                             fit: BoxFit.contain,
                           ),
                         ),

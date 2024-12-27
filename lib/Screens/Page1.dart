@@ -128,6 +128,12 @@ class _Page1State extends State<Page1> {
                       ],
                     ),
                     const Spacer(),
+                    Image.asset(
+                      'assets/img/vecteezy_scooter-with-delivery-man-flat-cartoon-character-fast_23743925.png',
+                      height: 160,
+                      width: 160,
+                      fit: BoxFit.cover,
+                    ),
                   ],
                 ),
               ),
