@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/Tabs/tab_burger.dart';
+import 'package:food_delivery/Tabs/tab_frite.dart';
+import 'package:food_delivery/Tabs/tab_pizza.dart';
+import 'package:food_delivery/Tabs/tab_poulet.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 
@@ -211,12 +214,18 @@ class _Page1State extends State<Page1> {
                       ),
                       child: Row(
                         children: [
-                          const CircleAvatar(
+                          CircleAvatar(
                             radius: 15,
+                            backgroundColor: Colors.white,
+                            child: Image.asset(
+                              'assets/img/Pizza (3).png',
+                              height: 20,
+                              width: 20,
+                            ),
                           ),
                           const SizedBox(width: 10),
                           Text(
-                            "Burger",
+                            "Pizza",
                             style: TextStyle(
                               fontSize: 15,
                               color: _selectedIndex == 1
@@ -243,12 +252,18 @@ class _Page1State extends State<Page1> {
                       ),
                       child: Row(
                         children: [
-                          const CircleAvatar(
+                          CircleAvatar(
                             radius: 15,
+                            backgroundColor: Colors.white,
+                            child: Image.asset(
+                              'assets/img/Frite (3).png',
+                              height: 20,
+                              width: 20,
+                            ),
                           ),
                           const SizedBox(width: 10),
                           Text(
-                            "Burger",
+                            "Frite",
                             style: TextStyle(
                               fontSize: 15,
                               color: _selectedIndex == 2
@@ -275,12 +290,18 @@ class _Page1State extends State<Page1> {
                       ),
                       child: Row(
                         children: [
-                          const CircleAvatar(
+                          CircleAvatar(
                             radius: 15,
+                            backgroundColor: Colors.white,
+                            child: Image.asset(
+                              'assets/img/Po (3).png',
+                              height: 20,
+                              width: 20,
+                            ),
                           ),
                           const SizedBox(width: 10),
                           Text(
-                            "Burger",
+                            "Chikender",
                             style: TextStyle(
                               fontSize: 15,
                               color: _selectedIndex == 3
@@ -306,15 +327,9 @@ class _Page1State extends State<Page1> {
               },
               children: const [
                 TabBurger(),
-                Center(
-                  child: Text('Page 2'),
-                ),
-                Center(
-                  child: Text('Page 3'),
-                ),
-                Center(
-                  child: Text('Page 3'),
-                ),
+                TabPizza(),
+                TabFrite(),
+                TabPoulet()
               ],
             ),
           ),

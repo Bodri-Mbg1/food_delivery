@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery/Classes/burgers_class.dart';
+import 'package:food_delivery/Classes/pizza.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-class DetailsBurger extends StatefulWidget {
-  final Burger burger;
-  const DetailsBurger({super.key, required this.burger});
+class DetailsPizza extends StatefulWidget {
+  final Pizza pizza;
+  const DetailsPizza({super.key, required this.pizza});
 
   @override
-  State<DetailsBurger> createState() => _DetailsBurgerState();
+  State<DetailsPizza> createState() => _DetailsPizzaState();
 }
 
-class _DetailsBurgerState extends State<DetailsBurger> {
+class _DetailsPizzaState extends State<DetailsPizza> {
   int quantity = 1;
   @override
-
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xff064635),
@@ -95,9 +94,9 @@ class _DetailsBurgerState extends State<DetailsBurger> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 140),
+            padding: const EdgeInsets.only(top: 140, left: 30),
             child: Image.asset(
-              widget.burger.imagePath, // Image dynamique
+              widget.pizza.imagePath, // Image dynamique
               height: 370,
               width: 370,
             ),
@@ -151,7 +150,7 @@ class _DetailsBurgerState extends State<DetailsBurger> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            widget.burger.name, // Nom du burger
+                            widget.pizza.name, // Nom du burger
                             style: GoogleFonts.varelaRound(
                                 fontSize: 18,
                                 color: Colors.black,
@@ -166,8 +165,8 @@ class _DetailsBurgerState extends State<DetailsBurger> {
                               ),
                               const SizedBox(width: 5),
                               Text(
-                                widget.burger
-                                    .description, // Description du burger
+                                widget
+                                    .pizza.description, // Description du burger
                                 style: GoogleFonts.varelaRound(
                                     fontSize: 15, color: Colors.black),
                               ),
@@ -177,7 +176,7 @@ class _DetailsBurgerState extends State<DetailsBurger> {
                       ),
                       const Spacer(),
                       Text(
-                        "\$${(widget.burger.price * quantity).toStringAsFixed(2)}", // Prix du burger
+                        "\$${(widget.pizza.price * quantity).toStringAsFixed(2)}", // Prix du burger
                         style: GoogleFonts.varelaRound(
                             fontSize: 20,
                             color: Colors.black,

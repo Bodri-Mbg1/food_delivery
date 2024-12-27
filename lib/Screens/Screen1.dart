@@ -72,8 +72,14 @@ class _Screen1State extends State<Screen1> {
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: Icon(
-                  IconsaxPlusBold.bag_happy,
+                icon: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 25,
+                  child: Icon(
+                    IconsaxPlusBold.bag_happy,
+                    color: Color(0xfff59e0b),
+                    size: 30,
+                  ),
                 ),
                 label: '',
               ),
